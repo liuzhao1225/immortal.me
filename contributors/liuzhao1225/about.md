@@ -1,6 +1,6 @@
 # 关于刘朝 (Zhao Liu)
 
-1997.12.25 出生。开发者，[YouDub-webui](https://github.com/liuzhao1225/YouDub-webui)（⭐ 4k）作者，immortal.me 发起人。
+1997.12.25 出生。开发者，[YouDub-webui](https://github.com/liuzhao1225/YouDub-webui)（⭐ 4k）作者，remember-me.ai 发起人。
 
 ## 我做过什么
 
@@ -10,7 +10,7 @@
 
 后来我又做了 bili-arena（B 站视频 PK 排名平台）、JPark（A 股分析工作台）等项目，都是在探索 AI 如何更好地服务于人。
 
-## 为什么做 immortal.me
+## 为什么做 remember-me.ai
 
 2025 年 2 月，我看到了影视飓风关于 Seedance 2.0 的视频。只上传一张脸的照片，AI 就自动用那个人的声音说话了——没有给任何提示词，没有给声音文件。
 
@@ -18,5 +18,4 @@
 
 那一刻我想到：与其恐惧，不如拥抱。如果 AI 必然会学习我们的数据，那为什么不主动地、有组织地留下自己？
 
-这就是 immortal.me——一个让每个人都能主动留下自己的数字永生实验。
-<!-- test -->
+这就是 remember-me.ai——一个让每个人都能主动留下自己的数字永生实验。

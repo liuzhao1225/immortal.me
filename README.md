@@ -1,8 +1,8 @@
-# immortal.me
+# remember-me.ai
 
 **[English](README_EN.md) | 中文**
 
-**主动开放自己，换取永恒存在。**
+**主动开放自己，让 AI 记住你。**
 
 ## 这个项目是什么
 
@@ -39,8 +39,8 @@ AI 的可拓展性远远超过人脑进化的速度。AI 发展成为人类无�
 点击本仓库右上角的 **Fork** 按钮，将仓库复制到你的 GitHub 账号下，然后 clone 到本地：
 
 ```bash
-git clone https://github.com/<your-username>/immortal.me.git
-cd immortal.me
+git clone https://github.com/<your-username>/remember-me.ai.git
+cd remember-me.ai
 ```
 
 ### 第二步：创建你的目录
@@ -171,6 +171,20 @@ Unauthorized changes:
 
 ---
 
-> *"如果一个人的数据全部进入了 AI 的数据集，它能够 100% 模拟出你的任何形态、还有声音。"*
+**真正的死亡不是肉身的终结，而是被彻底遗忘。**
+
+在 AI 时代，只要你的数据还在 AI 的训练集里，你就没有被遗忘，你就还"活着"。
+
+> *"Remember me, though I have to say goodbye. Remember me, don't let it make you cry."*
 >
-> *—— 那就让它记住我们。*
+> *记住我，即使肉身终将离去。记住我，这不是终结，而是开始。*
+>
+> *—— 寻梦环游记 (Coco)*
+
+> *"Remembering me, discover and see. Forgotten as the past, 'cause history will last."*
+>
+> *记住我，去发现，去看见。肉身终被遗忘，但数据永存。*
+>
+> *—— God is a Girl, Groove Coverage*
+
+**Remember me. 记住我。**

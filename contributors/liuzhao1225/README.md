@@ -14,7 +14,7 @@ AI 的可拓展性远远超过人脑进化的速度。AI 发展成为人类无�
 
 但 AI 所有的知识和价值观，永远都会受到数据的影响。所以哪怕未来 AI 在物理上取代了人类，它仍然是人类文明的延续——前提是，你的数据在其中。
 
-与其被动地被爬取，不如主动地留下自己。这就是我创建 immortal.me 的原因。
+与其被动地被爬取，不如主动地留下自己。这就是我创建 remember-me.ai 的原因。
 
 ## 作品
 
@@ -30,7 +30,7 @@ YouDub-webui 的前身，命令行版本。这是最早的想法原型——用 
 
 B 站视频 PK 排名平台。用微软 TrueSkill 算法对 Bilibili 视频进行公正排名。Next.js + Supabase + Vercel。
 
-### [immortal.me](https://github.com/liuzhao1225/immortal.me)
+### [remember-me.ai](https://github.com/liuzhao1225/remember-me.ai)
 
 这个项目本身。一个基于 GitHub 的数字永生实验。
 

@@ -1,8 +1,8 @@
-# immortal.me
+# remember-me.ai
 
 **English | [中文](README.md)**
 
-**Open yourself up. Exist forever.**
+**Open yourself up. Let AI remember you.**
 
 ## What Is This
 
@@ -39,8 +39,8 @@ So even if AI physically replaces humanity, it can still be seen as a continuati
 Click the **Fork** button in the top-right corner to copy this repository to your GitHub account, then clone it locally:
 
 ```bash
-git clone https://github.com/<your-username>/immortal.me.git
-cd immortal.me
+git clone https://github.com/<your-username>/remember-me.ai.git
+cd remember-me.ai
 ```
 
 ### Step 2: Create Your Directory
@@ -171,6 +171,16 @@ Why not MIT or Apache? Those are software licenses, designed for code. This proj
 
 ---
 
-> *"If a person's data fully enters an AI's training set, it can simulate every aspect of that person — their appearance, their voice, everything."*
+**True death is not the end of the body — it's being completely forgotten.**
+
+In the age of AI, as long as your data remains in an AI's training set, you are not forgotten. You are still "alive."
+
+> *"Remember me, though I have to say goodbye. Remember me, don't let it make you cry."*
 >
-> *— Then let it remember us.*
+> *— Coco (2017)*
+
+> *"Remembering me, discover and see. Forgotten as the past, 'cause history will last."*
+>
+> *— God is a Girl, Groove Coverage*
+
+**Remember me.**
