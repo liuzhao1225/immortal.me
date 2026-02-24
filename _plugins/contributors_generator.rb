@@ -89,7 +89,8 @@ module RememberMe
           content = File.read(File.join(posts_dir, file), encoding: "utf-8")
           title = content[/^#\s+(.+)/, 1]&.strip || file.sub(/\.md$/, "")
           slug = file.sub(/\.md$/, "")
-          { "title" => title, "slug" => slug, "content" => content }
+          date = slug[/^(\d{4}-\d{2}-\d{2})/, 1] || ""
+          { "title" => title, "slug" => slug, "date" => date, "content" => content }
         end
     end
   end

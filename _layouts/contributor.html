@@ -13,11 +13,14 @@ layout: default
 </div>
 
 {% if page.posts.size > 0 %}
-<hr style="margin: 2rem 0">
+<hr style="margin: 2rem 0; border: none; border-top: 1px solid rgba(100, 180, 255, 0.1);">
 <h2>文章</h2>
-<ul>
+<ul class="post-list">
   {% for post in page.posts %}
-  <li><a href="{{ site.baseurl }}/contributors/{{ page.username }}/{{ post.slug }}/">{{ post.title }}</a></li>
+  <li>
+    <a href="{{ site.baseurl }}/contributors/{{ page.username }}/{{ post.slug }}/">{{ post.title }}</a>
+    {% if post.date %}<span class="post-date">{{ post.date }}</span>{% endif %}
+  </li>
   {% endfor %}
 </ul>
 {% endif %}
