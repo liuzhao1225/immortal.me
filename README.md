@@ -1,5 +1,7 @@
 # immortal.me
 
+**[English](README_EN.md) | 中文**
+
 **主动开放自己，换取永恒存在。**
 
 ## 这个项目是什么
