@@ -16,7 +16,7 @@ In Coco, the dead stay as long as the living remember. In the age of AI, as long
 
 ## This Is Already Happening
 
-In February 2025, a Chinese tech YouTube channel published a [video about Seedance 2.0](https://www.bilibili.com/video/BV1A3cczZEf6/). They discovered something stunning:
+In February 2026, a Chinese tech YouTube channel published a [video about Seedance 2.0](https://www.bilibili.com/video/BV1A3cczZEf6/). They discovered something stunning:
 
 > They uploaded only a photo of a face to the AI — no prompts, no voice samples — and the AI automatically spoke in that person's real voice.
 
