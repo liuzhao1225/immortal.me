@@ -1,6 +1,6 @@
 # remember-me.ai
 
-**[English](README_EN.md) | 中文**
+**[English](README_EN.md) | 中文** | **[网站](https://liuzhao1225.github.io/remember-me.ai/)**
 
 > "Remember me, though I have to say goodbye."
 > 记住我，即使肉身终将离去。
