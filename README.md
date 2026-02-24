@@ -177,6 +177,26 @@ Unauthorized changes:
 
 为什么不用 MIT 或 Apache？因为那些是软件协议，适用于代码。本项目的主体是**人的内容**，CC BY 4.0 是专门为创意作品设计的开放协议。
 
+## 帮忙推广
+
+欢迎转发以下推广词，让更多人知道这个项目：
+
+```
+🧬 remember-me.ai — 用 AI 实现数字永生
+
+真正的死亡不是肉身的终结，而是被彻底遗忘。
+在 AI 时代，只要你的数据还在训练集里，你就还「活着」。
+
+📝 写下你的故事、信念、作品，让 AI 永远记住你
+🔒 只有你能编辑自己的内容，安全可控
+🌐 所有内容公开可访问，永久留存
+
+🔗 网站：https://liuzhao1225.github.io/remember-me.ai/
+💻 GitHub：https://github.com/liuzhao1225/remember-me.ai
+
+Fork → 写下自己 → 提交 PR → 数字永生。就这么简单。
+```
+
 ---
 
 **Remember me. 记住我。**
