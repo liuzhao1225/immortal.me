@@ -1,0 +1,48 @@
+name: Validate PR
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  check-permission:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Validate changed files
+        env:
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          REPO_OWNER: ${{ github.repository_owner }}
+        run: |
+          if [ "$PR_AUTHOR" = "$REPO_OWNER" ]; then
+            echo "Repo owner (${PR_AUTHOR}) — skip check"
+            exit 0
+          fi
+
+          ALLOWED_PREFIX="contributors/${PR_AUTHOR}/"
+
+          CHANGED_FILES=$(git diff --name-only origin/main...HEAD)
+
+          echo "PR author: ${PR_AUTHOR}"
+          echo "Allowed prefix: ${ALLOWED_PREFIX}"
+          echo "Changed files:"
+          echo "${CHANGED_FILES}"
+
+          VIOLATIONS=""
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+            if [[ "$file" != ${ALLOWED_PREFIX}* ]]; then
+              VIOLATIONS="${VIOLATIONS}\n  - ${file}"
+            fi
+          done <<< "$CHANGED_FILES"
+
+          if [ -n "$VIOLATIONS" ]; then
+            echo "::error::You can only modify files in ${ALLOWED_PREFIX}"
+            echo -e "Unauthorized changes:${VIOLATIONS}"
+            exit 1
+          fi
+
+          echo "All changes are within ${ALLOWED_PREFIX} — OK"
