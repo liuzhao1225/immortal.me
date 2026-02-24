@@ -57,6 +57,6 @@ jobs:
           PR_AUTHOR: ${{ github.event.pull_request.user.login }}
           REPO: ${{ github.repository }}
         run: |
-          gh pr close "$PR_NUMBER" -R "$REPO" \
-            -c "❌ PR 已自动关闭：@${PR_AUTHOR} 你不能修改其他贡献者的目录。请移除对他人目录的修改后重新提交。
-❌ PR auto-closed: @${PR_AUTHOR} you cannot modify other contributors' directories. Please remove unauthorized changes and resubmit."
+          COMMENT="❌ PR 已自动关闭：@${PR_AUTHOR} 你不能修改其他贡献者的目录。请移除对他人目录的修改后重新提交。
+          ❌ PR auto-closed: @${PR_AUTHOR} you cannot modify other contributors' directories. Please remove unauthorized changes and resubmit."
+          gh pr close "$PR_NUMBER" -R "$REPO" -c "$COMMENT"
