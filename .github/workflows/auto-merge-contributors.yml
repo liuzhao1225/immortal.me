@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.user.login != github.repository_owner
     steps:
-      - name: Validate and auto-merge
+      - name: Check and auto-merge
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
@@ -23,14 +23,20 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           ALLOWED="contributors/${PR_AUTHOR}/"
+          ALL_MINE=true
 
           while IFS= read -r file; do
             [ -z "$file" ] && continue
             if [[ "$file" != ${ALLOWED}* ]]; then
-              echo "::error::Unauthorized change: $file"
-              exit 1
+              ALL_MINE=false
+              break
             fi
           done <<< "$(gh pr diff "$PR_NUMBER" -R "$REPO" --name-only)"
+
+          if [ "$ALL_MINE" = false ]; then
+            echo "PR contains changes outside ${ALLOWED} — skip auto-merge, leave open for manual review"
+            exit 0
+          fi
 
           gh pr review "$PR_NUMBER" -R "$REPO" --approve \
             -b "Auto-approved: all changes within ${ALLOWED}"

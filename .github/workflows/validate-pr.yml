@@ -26,33 +26,31 @@ jobs:
             exit 0
           fi
 
-          ALLOWED="contributors/${PR_AUTHOR}/"
           CHANGED=$(gh pr diff "$PR_NUMBER" -R "$REPO" --name-only)
 
           echo "PR author: ${PR_AUTHOR}"
-          echo "Allowed prefix: ${ALLOWED}"
           echo "Changed files:"
           echo "${CHANGED}"
 
-          VIOLATIONS=""
+          TOUCHED_OTHERS=""
           while IFS= read -r file; do
             [ -z "$file" ] && continue
-            if [[ "$file" != ${ALLOWED}* ]]; then
-              VIOLATIONS="${VIOLATIONS}\n  - ${file}"
+            if [[ "$file" == contributors/* && "$file" != contributors/${PR_AUTHOR}/* ]]; then
+              TOUCHED_OTHERS="${TOUCHED_OTHERS}\n  - ${file}"
             fi
           done <<< "$CHANGED"
 
-          if [ -n "$VIOLATIONS" ]; then
-            echo "::error::You can only modify files in ${ALLOWED}"
-            echo -e "Unauthorized changes:${VIOLATIONS}"
-            echo "violations=true" >> "$GITHUB_OUTPUT"
+          if [ -n "$TOUCHED_OTHERS" ]; then
+            echo "::error::You cannot modify other contributors' directories"
+            echo -e "Unauthorized changes:${TOUCHED_OTHERS}"
+            echo "touched_others=true" >> "$GITHUB_OUTPUT"
             exit 1
           fi
 
-          echo "All changes are within ${ALLOWED} — OK"
+          echo "No unauthorized changes — OK"
 
       - name: Close invalid PR
-        if: failure() && steps.validate.outputs.violations == 'true'
+        if: failure() && steps.validate.outputs.touched_others == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PR_NUMBER: ${{ github.event.pull_request.number }}
@@ -60,4 +58,4 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           gh pr close "$PR_NUMBER" -R "$REPO" \
-            -c "❌ PR 已自动关闭：@${PR_AUTHOR} 你只能修改 contributors/${PR_AUTHOR}/ 目录下的文件。请移除越权修改后重新提交。"
+            -c "❌ PR 已自动关闭：@${PR_AUTHOR} 你不能修改其他贡献者的目录。请移除对他人目录的修改后重新提交。"
