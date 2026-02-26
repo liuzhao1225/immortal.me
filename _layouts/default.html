@@ -351,6 +351,57 @@
       flex-shrink: 0;
     }
 
+    /* Promote section */
+    .promote-section {
+      margin: 2rem 0 2.5rem;
+    }
+    .promote-section h2 {
+      color: var(--text-primary);
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .promote-desc {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+    .promote-box {
+      position: relative;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 1.2rem 1.2rem 1rem;
+    }
+    .promote-text {
+      font-family: inherit;
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: var(--text-primary);
+      white-space: pre-wrap;
+      word-break: break-all;
+      margin: 0;
+      background: none;
+      border: none;
+      padding: 0;
+    }
+    .copy-btn {
+      margin-top: 1rem;
+      padding: 0.4rem 1.2rem;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet));
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: box-shadow 0.3s, opacity 0.3s;
+      letter-spacing: 0.02em;
+    }
+    .copy-btn:hover {
+      box-shadow: 0 4px 16px rgba(0, 200, 255, 0.3);
+    }
+
     /* Selection color */
     ::selection {
       background: rgba(0, 200, 255, 0.25);
@@ -393,6 +444,16 @@
     </footer>
   </div>
 
+  <script>
+  function copyPromote(btn) {
+    var text = document.getElementById('promote-text');
+    if (!text) return;
+    navigator.clipboard.writeText(text.innerText).then(function () {
+      btn.textContent = '已复制 ✓';
+      setTimeout(function () { btn.textContent = '复制'; }, 2000);
+    });
+  }
+  </script>
   <script>
   (function () {
     var canvas = document.getElementById('cosmos-canvas');
