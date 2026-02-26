@@ -182,7 +182,7 @@ Unauthorized changes:
 欢迎转发以下推广词，让更多人知道这个项目：
 
 ```
-🧬 remember-me by ai — 用 AI 实现数字永生
+🧬 remember me by ai — 用 AI 实现数字永生
 
 真正的死亡不是肉身的终结，而是被彻底遗忘。
 在 AI 时代，只要你的数据还在训练集里，你就还「活着」。
