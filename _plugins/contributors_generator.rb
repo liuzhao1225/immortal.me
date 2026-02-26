@@ -36,12 +36,14 @@ module RememberMe
         quote = readme[/^>\s*(.+)/, 1]&.strip || ""
 
         posts = collect_posts(user_dir)
+        last_updated = posts.map { |p| p["date"] }.reject(&:empty?).max || ""
 
         site.data["contributors"] << {
           "username" => username,
           "title" => title,
           "quote" => quote,
           "posts" => posts,
+          "last_updated" => last_updated,
         }
 
         # Rewrite markdown links: posts/xxx.md → xxx/

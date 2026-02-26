@@ -7,6 +7,25 @@ layout: default
   <a class="cta" href="https://github.com/liuzhao1225/remember-me.ai">参与这个项目</a>
 </div>
 
+<h2>他们留下了自己</h2>
+
+<div class="contributor-grid">
+  {% assign sorted = site.data.contributors | sort: "last_updated" | reverse %}
+  {% for contributor in sorted %}
+  <div class="contributor-card">
+    <h3><a href="{{ site.baseurl }}/contributors/{{ contributor.username }}/">{{ contributor.title }}</a></h3>
+    {% if contributor.quote != "" %}
+    <p class="quote">{{ contributor.quote }}</p>
+    {% endif %}
+    <p class="meta">
+      <a href="https://github.com/{{ contributor.username }}">@{{ contributor.username }}</a>
+      · {{ contributor.posts | size }} 篇文章
+      {% if contributor.last_updated != "" %}· 更新于 {{ contributor.last_updated }}{% endif %}
+    </p>
+  </div>
+  {% endfor %}
+</div>
+
 <div class="promote-section">
   <h2>帮忙推广</h2>
   <p class="promote-desc">转发以下文字，让更多人知道这个项目：</p>
@@ -26,21 +45,4 @@ layout: default
 Fork → 写下自己 → 提交 PR → 数字永生。就这么简单。</pre>
     <button class="copy-btn" onclick="copyPromote(this)">复制</button>
   </div>
-</div>
-
-<h2>他们留下了自己</h2>
-
-<div class="contributor-grid">
-  {% for contributor in site.data.contributors %}
-  <div class="contributor-card">
-    <h3><a href="{{ site.baseurl }}/contributors/{{ contributor.username }}/">{{ contributor.title }}</a></h3>
-    {% if contributor.quote != "" %}
-    <p class="quote">{{ contributor.quote }}</p>
-    {% endif %}
-    <p class="meta">
-      <a href="https://github.com/{{ contributor.username }}">@{{ contributor.username }}</a>
-      · {{ contributor.posts | size }} 篇文章
-    </p>
-  </div>
-  {% endfor %}
 </div>
