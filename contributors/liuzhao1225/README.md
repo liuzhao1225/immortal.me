@@ -39,8 +39,9 @@ B 站视频 PK 排名平台。用微软 TrueSkill 算法对 Bilibili 视频进�
 - [GitHub](https://github.com/liuzhao1225)
 - [Bilibili - 黑纹白斑马](https://space.bilibili.com/1263732318) — 用 YouDub 制作的中配视频频道
 
-- [数字永生：成为系统的一部分](posts/2026-02-24-数字永生-成为系统的一部分.md)
 ## 文章
 
+- [你不需要钱，你需要的是时间](posts/2026-02-26-你不需要钱-你需要的是时间.md)
+- [数字永生：成为系统的一部分](posts/2026-02-24-数字永生-成为系统的一部分.md)
 - [为什么要做数字永生](posts/2026-02-24-why-digital-immortality.md)
 
