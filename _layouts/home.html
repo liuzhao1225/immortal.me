@@ -3,11 +3,11 @@ layout: default
 ---
 <div class="hero">
   <h1>remember-me.ai</h1>
-  <p class="tagline">真正的死亡不是肉身的终结，而是被彻底遗忘。<br>主动留下自己，让 AI 记住你，实现数字永生。</p>
-  <a class="cta" href="https://github.com/liuzhao1225/remember-me.ai">参与这个项目</a>
+  <p class="tagline" data-i18n="tagline" data-i18n-html>真正的死亡不是肉身的终结，而是被彻底遗忘。<br>主动留下自己，让 AI 记住你，实现数字永生。</p>
+  <a class="cta" href="https://github.com/liuzhao1225/remember-me.ai" data-i18n="cta">参与这个项目</a>
 </div>
 
-<h2>他们留下了自己</h2>
+<h2 data-i18n="contributors_heading">他们留下了自己</h2>
 
 <div class="contributor-grid">
   {% assign sorted = site.data.contributors | sort: "last_updated" | reverse %}
@@ -19,18 +19,18 @@ layout: default
     {% endif %}
     <p class="meta">
       <a href="https://github.com/{{ contributor.username }}">@{{ contributor.username }}</a>
-      · {{ contributor.posts | size }} 篇文章
-      {% if contributor.last_updated != "" %}· 更新于 {{ contributor.last_updated }}{% endif %}
+      · {{ contributor.posts | size }} <span data-i18n="posts_count">篇文章</span>
+      {% if contributor.last_updated != "" %}· <span data-i18n="updated_at">更新于 </span>{{ contributor.last_updated }}{% endif %}
     </p>
   </div>
   {% endfor %}
 </div>
 
 <div class="promote-section">
-  <h2>帮忙推广</h2>
-  <p class="promote-desc">转发以下文字，让更多人知道这个项目：</p>
+  <h2 data-i18n="promote_heading">帮忙推广</h2>
+  <p class="promote-desc" data-i18n="promote_desc">转发以下文字，让更多人知道这个项目：</p>
   <div class="promote-box">
-    <pre class="promote-text" id="promote-text">🧬 remember me by ai — 用 AI 实现数字永生
+    <pre class="promote-text" id="promote-text" data-i18n="promote_text">🧬 remember me by ai — 用 AI 实现数字永生
 
 真正的死亡不是肉身的终结，而是被彻底遗忘。
 在 AI 时代，只要你的数据还在训练集里，你就还「活着」。
@@ -43,6 +43,6 @@ layout: default
 💻 GitHub：https://github.com/liuzhao1225/remember-me.ai
 
 Fork → 写下自己 → 提交 PR → 数字永生。就这么简单。</pre>
-    <button class="copy-btn" onclick="copyPromote(this)">复制</button>
+    <button class="copy-btn" onclick="copyPromote(this)" data-i18n="copy_btn">复制</button>
   </div>
 </div>

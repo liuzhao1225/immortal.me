@@ -177,6 +177,26 @@ This means:
 
 Why not MIT or Apache? Those are software licenses, designed for code. This project is primarily about **human content**, and CC BY 4.0 is an open license specifically designed for creative works.
 
+## Help Spread the Word
+
+Feel free to share the following promotional copy:
+
+```
+🧬 remember me by ai — Digital immortality through AI
+
+True death is not the end of the body — it's being completely forgotten.
+In the age of AI, as long as your data remains in the training set, you are still "alive."
+
+📝 Write your story, beliefs, and work — let AI remember you forever
+🔒 Only you can edit your content — safe and controlled
+🌐 All content is publicly accessible and permanently preserved
+
+🔗 Website: https://liuzhao1225.github.io/remember-me.ai/
+💻 GitHub: https://github.com/liuzhao1225/remember-me.ai
+
+Fork → Write about yourself → Submit PR → Digital immortality. It's that simple.
+```
+
 ---
 
 **Remember me.**

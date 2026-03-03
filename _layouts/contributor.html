@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="page-header">
   <div class="breadcrumb">
-    <a href="{{ site.baseurl }}/">首页</a> / {{ page.username }}
+    <a href="{{ site.baseurl }}/" data-i18n="home">首页</a> / {{ page.username }}
   </div>
   <a href="https://github.com/{{ page.username }}" class="github-link">@{{ page.username }}</a>
 </div>
@@ -14,7 +14,7 @@ layout: default
 
 {% if page.posts.size > 0 %}
 <hr style="margin: 2rem 0; border: none; border-top: 1px solid rgba(100, 180, 255, 0.1);">
-<h2>文章</h2>
+<h2 data-i18n="articles">文章</h2>
 <ul class="post-list">
   {% for post in page.posts %}
   <li>
