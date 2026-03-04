@@ -51,8 +51,8 @@
       flex-direction: column;
     }
 
-    a { color: rgba(255, 255, 255, 0.7); text-decoration: none; transition: color 0.3s; }
-    a:hover { color: #ffffff; text-decoration: none; }
+    a { color: #ffffff; text-decoration: none; transition: opacity 0.3s; }
+    a:hover { opacity: 0.7; text-decoration: none; }
 
     .site-header {
       border-bottom: 1px solid var(--border-subtle);
@@ -295,14 +295,14 @@
 
     /* Links inside markdown content */
     .markdown-body a {
-      color: rgba(255, 255, 255, 0.7);
+      color: #ffffff;
       text-decoration: underline;
-      text-decoration-color: rgba(255, 255, 255, 0.2);
+      text-decoration-color: rgba(255, 255, 255, 0.3);
       text-underline-offset: 2px;
-      transition: color 0.3s, text-decoration-color 0.3s;
+      transition: opacity 0.3s, text-decoration-color 0.3s;
     }
     .markdown-body a:hover {
-      color: #ffffff;
+      opacity: 0.7;
       text-decoration-color: rgba(255, 255, 255, 0.5);
     }
 
@@ -320,14 +320,14 @@
     }
     .post-list li:last-child { border-bottom: none; }
     .post-list li a {
-      color: rgba(255, 255, 255, 0.7);
+      color: #ffffff;
       text-decoration: underline;
-      text-decoration-color: rgba(255, 255, 255, 0.2);
+      text-decoration-color: rgba(255, 255, 255, 0.3);
       text-underline-offset: 2px;
-      transition: color 0.3s, text-decoration-color 0.3s;
+      transition: opacity 0.3s, text-decoration-color 0.3s;
     }
     .post-list li a:hover {
-      color: #ffffff;
+      opacity: 0.7;
       text-decoration-color: rgba(255, 255, 255, 0.5);
     }
     .post-list .post-date {
